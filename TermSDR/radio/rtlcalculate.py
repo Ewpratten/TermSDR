@@ -10,5 +10,5 @@ def remap(data):
 	output = []
 	for item in data:
 		num = item.real
-		output.append(m(num))
+		output.append(float(m(num)))
 	return output

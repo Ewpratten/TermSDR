@@ -20,10 +20,10 @@ class Display(object):
 			height = self.size["y"]
 		
 		# clear last point
-		self.__putChar(col, self.point_map[col - 1], " ")
+		self.__putChar(col, self.point_map[col - 1], "\u001b[0m ")
 		
 		# put new char
-		self.__putChar(col, self.size["y"] - height, "@")
+		self.__putChar(col, self.size["y"] - height, "\u001b[44m@")
 		
 		# add point to point map
 		self.point_map[col - 1] = self.size["y"] - height

@@ -29,7 +29,15 @@ calculate.buildMap(rows)
 
 print("READY")
 
-print(calculate.remap(radio.read(cols)))
+display.clear()
+try:
+	while True:
+		for i,point in enumerate(calculate.remap(radio.read(cols))):
+			if i < cols - 1:
+				display.setCol(i, int(round(point)))
+except:
+	print("Stopping")
+	display.clear()
 
 # Test Display
 # display.clear()
